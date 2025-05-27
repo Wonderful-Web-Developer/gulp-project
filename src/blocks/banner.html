@@ -1,0 +1,35 @@
+<section class="banner">
+        <div class="container">
+            <h3>КИБЕРСПОРТИВНЫЙ</h3>
+            <h3>КОМПЬЮТЕРНЫЙ КЛУБ</h3>
+            <h2>TARGET</h2>
+            <ul class="features">
+                <li><img src="./../img/Button.png" alt="button"><p>Топовое железо</p></li>
+                <li><img src="./../img/Button.png" alt="button"><p>Уникальный интерьер</p></li>
+                <li><img src="./../img/Button.png" alt="button"><p>Лаундж зона и кафе бар</p></li>
+            </ul>
+            <div class="button">
+                <button class="section__button">Забронировать</button>
+            </div>
+        </div>
+
+        <div class="modal">
+            <div class="modal__main">
+                <h2 class="modal__title">Забронировать место</h2>
+                <hr class="modal__line">
+        
+                <div class="modal__container">
+                    <form id="bookingForm" class="modal__form" novalidate>
+                        <input type="text" name="fio" placeholder="ФИО" class="modal__input" required />
+                        <input type="tel" name="phone" placeholder="Номер телефона" class="modal__input" required pattern="^\+?\d{10,15}$" title="Введите номер телефона в формате: +1234567890 или 1234567890" />
+                        <input type="email" name="email" placeholder="E-mail" class="modal__input" required />
+                        <input type="number" name="persons" placeholder="Количество человек" class="modal__input" required min="1" />
+                        <input type="date" name="date" placeholder="Дата бронирования" class="modal__input" required />
+                        <input type="time" name="time" placeholder="Время бронирования" class="modal__input" required />
+                        <div class="button"><button type="submit" class="modal__btn">Забронировать</button></div>
+                    </form>
+                </div>
+                <button class="modal__close">&#10006;</button>
+            </div>
+        </div>
+</section>

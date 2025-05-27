@@ -1,0 +1,28 @@
+<section class="form">
+    <div class="container">
+        <h2>Подписка на новости и акции</h2>
+        <hr class="divider2">
+        <div class="action">
+            <span>3 часа игры на топовом ПК в подарок 🎁</span>
+        </div>
+        <form id="mainForm" class="main-form">
+            <input type="tel" name="phone" class="main-input" placeholder="Номер телефона" required pattern="^\+?\d{10,15}$" title="Введите номер телефона в формате: +1234567890 или 1234567890">
+            <input type="email" name="email" class="main-input" placeholder="E-mail" required>
+            
+            <div class="check">
+                <div>
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent" class="checkbox-custom"></label>
+                </div>
+                <div>
+                    <span>Я даю согласие на обработку персональных данных в соответствии с 
+                        <a href="./../files/Политика конфиденциальности TARGET.pdf" download>политикой конфиденциальности</a>
+                    </span>
+                </div>
+            </div>
+            <div class="button">
+                <button class="section__button2" type="submit">Подписаться</button>
+            </div>
+        </form>
+    </div>
+</section>

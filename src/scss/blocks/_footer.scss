@@ -1,0 +1,168 @@
+.footer {
+    background-color: #290671;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap; 
+
+        & .footer__logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        & .footer__socials {
+            display: flex;
+
+            .social-icon img {
+                width: 52px;
+                height: 52px;
+                margin-left: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-decoration: none;
+                transition: transform 0.4s ease; 
+            }
+
+            .social-icon img:hover {
+                transform: scale(1.4); 
+            }
+        }
+    }
+
+    .footer__policy {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        font-size: 16pt;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: white;
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+        
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+
+    .contacts-info2 {
+        display: flex;
+        justify-content: space-around; 
+        align-items: center; 
+        margin: 20px 0 0 0;
+        flex-wrap: wrap; 
+
+        .contact2 {
+            text-align: center; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin: 0 18px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+
+            a {
+                text-decoration: none;
+                display: flex; 
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 24px;
+                color: white;
+                margin: 0 25px;
+                padding: 0 0 10px 0;
+                position: relative;
+                transition: text-shadow 0.5s ease;
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 16pt; 
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                    height: 2px;
+                    width: 0;
+                    background-color: white;
+                    transition: width 0.5s ease;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+
+                &:hover {
+                    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 720px) {
+        padding: 10px; 
+
+        & .footer__logo img {
+            display: none;
+        }
+
+        & .footer__socials {
+            display: flex;
+
+            .social-icon img {
+                width: 52px;
+                height: 52px;
+                margin: 6px 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        &__content {
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+        }
+
+        .footer__socials {
+            margin: 10px 0; 
+        }
+
+        .contacts-info2 {
+            display: none;
+        }
+
+        .footer__policy {
+            display: none; 
+        }
+    }
+}
