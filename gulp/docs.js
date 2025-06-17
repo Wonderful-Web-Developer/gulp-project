@@ -46,7 +46,7 @@ gulp.task('html:docs', function(){
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(wepbHTML())
+        //.pipe(wepbHTML())
         .pipe(htmlclean())
         .pipe(gulp.dest('./docs/'))
 });
