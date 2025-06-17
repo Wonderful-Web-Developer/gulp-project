@@ -3,7 +3,7 @@ const gulp = require('gulp');
 //HTML
 const fileInclude = require('gulp-file-include');
 const htmlclean = require('gulp-htmlclean');
-const wepbHTML = require('gulp-webp-html')
+const webpHTML = require('gulp-webp-html')
 
 //SASS
 const sass = require('gulp-sass')(require('sass'));
@@ -46,7 +46,7 @@ gulp.task('html:docs', function(){
             prefix: '@@',
             basepath: '@file'
         }))
-        //.pipe(wepbHTML())
+        .pipe(webpHTML())
         .pipe(htmlclean())
         .pipe(gulp.dest('./docs/'))
 });
